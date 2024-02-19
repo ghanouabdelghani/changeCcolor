@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript for Everyone:DOM</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>MyCode challenges in 2021</h1>
+      <h2>learning JavaScript Challenge</h2>
+      <ul>
+        <li>HTML Challenge Done</li>
+        <li>CSS Challenge Done</li>
+        <li>javaScript Challenge Coming</li>
+        <li>Git/Github Challenge Ongoing</li>
+        <li>Reactjs Challenge Coming</li>
+        <li>Back-end with NodeJS and Express Challenge Coming</li>
+        <li>DataBase with MongDB Challenge Coming</li>
+      </ul>
+    </div>
+    <script>
+      const div = document.querySelector("h1");
+      const lis = document.querySelectorAll("li");
+
+      let colore = document.getElementById("full");
+
+      function getRandomColor() {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+
+      function changeColor() {
+        div.style.backgroundColor = getRandomColor();
+      }
+
+      setInterval(changeColor, 1000);
+
+      lis.forEach((li) => {
+        switch (true) {
+          case li.textContent.includes("Done"):
+            li.style.background = "green";
+            break;
+          case li.textContent.includes("Coming"):
+            li.style.background = "red";
+            break;
+          case li.textContent.includes("Ongoing"):
+            li.style.background = "yellow";
+            break;
+          default:
+            break;
+        }
+      });
+    </script>
+  </body>
+</html>

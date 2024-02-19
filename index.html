@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="p1" class="p11">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam dolor
+      officiis dignissimos deleniti repellat, pariatur ea possimus reprehenderit
+      soluta numquam natus ipsum quibusdam cupiditate dicta ratione quasi, est
+      rem sed?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore maiores
+      aliquam adipisci quia laudantium harum perferendis incidunt earum magni
+      vero, blanditiis doloremque explicabo numquam natus, dolorem saepe
+      exercitationem amet obcaecati.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem at enim
+      tempora odio necessitatibus veritatis dolores? Rem ullam praesentium, quis
+      inventore veniam sed a! Delectus, pariatur minima! Reiciendis, quasi
+      totam!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis,
+      quo porro est nesciunt reprehenderit maiores aliquam. Nemo qui voluptates,
+      ex itaque, est atque sit tenetur inventore expedita recusandae libero
+      mollitia!
+    </p>
+
+    <script>
+      const P1 = document.querySelector("p");
+      const p2 = document.querySelector("#p1");
+      const p3 = document.querySelectorAll("p");
+      const p4 = document.querySelectorAll("p");
+      const p5 = document.querySelectorAll("p");
+      for (let index = 0; index < p5.length; index++) {
+        // console.log(p5[index].textContent);
+      }
+
+      console.log(p4);
+      p4[3].textContent = "walou";
+      P1.class = "merci";
+      for (let index = 0; index < p5.length; index++) {
+        p5[index].style.cssText = `
+            color: green;
+            background: black;
+            border:5px solid red;
+            font-size:32px
+            `;
+      }
+      for (let index = 0; index < p5.length; index++) {
+        if (index % 2 == 0) {
+          p5[index].style.color = "red";
+        } else {
+          p5[index].style.color = "green";
+        }
+        p5[index].classList.add("paragraph", "par");
+      }
+      let box = document.createElement("p")
+      newParagraph.textecontent="4"
+      box.style.cssText="width:55px  height:80"
+    </script>
+  </body>
+</html>
